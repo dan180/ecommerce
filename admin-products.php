@@ -50,9 +50,11 @@ $app->get("/admin/products/:idproduct", function($idproduct){
 
 	$product = new Product();
 
-	$product -> get((int)$idproduct);
+	$product->get((int)$idproduct);
 
 	$page = new PageAdmin();
+
+
 
 	$page ->setTpl("products-update", [
 		"product"=>$product->getValues()
